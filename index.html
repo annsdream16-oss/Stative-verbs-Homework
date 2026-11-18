@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stative verbs Homework</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap');
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            padding: 30px;
+            max-width: 950px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            font-size: 1.8em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .task {
+            background-color: #fafafa;
+            border: 2px solid #e0e0e0;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .task h2 {
+            color: #3498db;
+            margin-top: 0;
+            font-size: 1.3em;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+
+        .task p {
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 700;
+            color: #555;
+        }
+
+        .input-group {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            font-size: 1.05em;
+        }
+
+        input[type="text"] {
+            padding: 8px 12px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: 'Nunito', sans-serif;
+            outline: none;
+            transition: border-color 0.3s;
+            width: 160px;
+        }
+
+        input[type="text"]:focus {
+            border-color: #3498db;
+        }
+
+        input.wide-input { width: 100%; max-width: 350px; }
+        
+        input.correct {
+            border-color: #2ecc71;
+            background-color: #e9f7ef;
+        }
+
+        input.incorrect {
+            border-color: #e74c3c;
+            background-color: #fdedec;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: 'Nunito', sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+            margin-top: 10px;
+        }
+
+        button:hover { background-color: #2980b9; }
+        button:active { transform: scale(0.98); }
+
+        .btn-check {
+            background-color: #e67e22;
+            width: 100%;
+            font-size: 1.1em;
+            padding: 12px;
+        }
+        
+        .btn-check:hover { background-color: #d35400; }
+
+        .feedback {
+            font-weight: bold;
+            margin-top: 15px;
+            font-size: 1.1em;
+            text-align: center;
+        }
+
+        .feedback.success { color: #2ecc71; }
+        .feedback.error { color: #e74c3c; }
+
+        /* Стили для письменных заданий */
+        .writing-box {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 5px solid #3498db;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 16px;
+            box-sizing: border-box;
+            resize: vertical;
+            min-height: 60px;
+            margin-top: 8px;
+        }
+
+        .hint {
+            font-size: 0.95em;
+            color: #444;
+            margin-bottom: 15px;
+            background-color: #fff3e0;
+            padding: 10px;
+            border-radius: 8px;
+            border-left: 4px solid #ff9800;
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        @media (max-width: 600px) {
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Stative verbs Homework</h1>
+    <div class="subtitle">Grammar Practice • Advanced Vocabulary</div>
+
+    <!-- Task 1: Translation -->
+    <div class="task">
+        <h2>1. Translate into English</h2>
+        <p>Напиши английский глагол по его русскому переводу.</p>
+        <div class="grid-2">
+            <div class="input-group"><span>1. принадлежать: </span><input type="text" id="v1"></div>
+            <div class="input-group"><span>2. казаться: </span><input type="text" id="v2"></div>
+            <div class="input-group"><span>3. осознавать: </span><input type="text" id="v3"></div>
+            <div class="input-group"><span>4. ненавидеть: </span><input type="text" id="v4"></div>
+            <div class="input-group"><span>5. предпочитать: </span><input type="text" id="v5"></div>
+            <div class="input-group"><span>6. содержать (внутри): </span><input type="text" id="v6"></div>
+            <div class="input-group"><span>7. подходить по размеру: </span><input type="text" id="v7"></div>
+            <div class="input-group"><span>8. иметь значение: </span><input type="text" id="v8"></div>
+            <div class="input-group"><span>9. быть должным: </span><input type="text" id="v9"></div>
+            <div class="input-group"><span>10. весить: </span><input type="text" id="v10"></div>
+            <div class="input-group"><span>11. желать: </span><input type="text" id="v11"></div>
+            <div class="input-group"><span>12. включать в себя: </span><input type="text" id="v12"></div>
+            <div class="input-group"><span>13. владеть: </span><input type="text" id="v13"></div>
+        </div>
+        <button class="btn-check" onclick="checkVocab()">Проверить ответы</button>
+        <div class="feedback" id="feedback-vocab"></div>
+    </div>
+
+    <!-- Task 2: Mixed Sentences (State vs Action) -->
+    <div class="task">
+        <h2>2. State or Action?</h2>
+        <p>Вставь глагол в скобках в правильной форме (Present Simple или Present Continuous). Будь внимательна: значение и контекст меняют время!</p>
+        <div class="grid-2">
+            <div class="input-group"><span>1. Why </span> <input type="text" id="d1" class="wide-input"> <span> (you / smell) the milk? Is it sour?</span></div>
+            <div class="input-group"><span>2. I </span> <input type="text" id="d2" class="wide-input"> <span> (think) she is right.</span></div>
+            <div class="input-group"><span>3. This perfume </span> <input type="text" id="d3" class="wide-input"> <span> (smell) amazing!</span></div>
+            <div class="input-group"><span>4. He </span> <input type="text" id="d4" class="wide-input"> <span> (have) a shower right now.</span></div>
+            <div class="input-group"><span>5. I </span> <input type="text" id="d5" class="wide-input"> <span> (think) about buying a new phone.</span></div>
+            <div class="input-group"><span>6. I </span> <input type="text" id="d6" class="wide-input"> <span> (see) the doctor tomorrow.</span></div>
+            <div class="input-group"><span>7. She </span> <input type="text" id="d7" class="wide-input"> <span> (have) two dogs.</span></div>
+            <div class="input-group"><span>8. I </span> <input type="text" id="d8" class="wide-input"> <span> (see) a bird in the tree.</span></div>
+            <div class="input-group"><span>9. The chef </span> <input type="text" id="d9" class="wide-input"> <span> (taste) the sauce to check the salt.</span></div>
+            <div class="input-group"><span>10. This soup </span> <input type="text" id="d10" class="wide-input"> <span> (taste) delicious.</span></div>
+            <div class="input-group"><span>11. They </span> <input type="text" id="d11" class="wide-input"> <span> (have) a party at the moment.</span></div>
+            <div class="input-group"><span>12. I </span> <input type="text" id="d12" class="wide-input"> <span> (see) my friends after school today.</span></div>
+        </div>
+        <button class="btn-check" onclick="checkDual()">Проверить ответы</button>
+        <div class="feedback" id="feedback-dual"></div>
+    </div>
+
+    <!-- Task 3: Correct the whole sentence -->
+    <div class="task">
+        <h2>3. Find and Correct the Mistakes</h2>
+        <p>В каждом предложении есть грамматическая ошибка. Напиши <b>всё предложение целиком</b> в исправленном виде (не забудь про точку в конце).</p>
+        <div class="grid-2">
+            <div class="input-group" style="flex-direction: column; align-items: flex-start;">
+                <span>1. I am knowing the answer.</span>
+                <input type="text" id="m1" class="wide-input" placeholder="Исправленное предложение...">
+            </div>
+            <div class="input-group" style="flex-direction: column; align-items: flex-start;">
+                <span>2. She is wanting to go home.</span>
+                <input type="text" id="m2" class="wide-input" placeholder="Исправленное предложение...">
+            </div>
+            <div class="input-group" style="flex-direction: column; align-items: flex-start;">
+                <span>3. He is owning a big house.</span>
+                <input type="text" id="m3" class="wide-input" placeholder="Исправленное предложение...">
+            </div>
+            <div class="input-group" style="flex-direction: column; align-items: flex-start;">
+                <span>4. The soup is tasting delicious.</span>
+                <input type="text" id="m4" class="wide-input" placeholder="Исправленное предложение...">
+            </div>
+            <div class="input-group" style="flex-direction: column; align-items: flex-start;">
+                <span>5. I am believing his story.</span>
+                <input type="text" id="m5" class="wide-input" placeholder="Исправленное предложение...">
+            </div>
+            <div class="input-group" style="flex-direction: column; align-items: flex-start;">
+                <span>6. They are preferring tea.</span>
+                <input type="text" id="m6" class="wide-input" placeholder="Исправленное предложение...">
+            </div>
+            <div class="input-group" style="flex-direction: column; align-items: flex-start;">
+                <span>7. I am seeing a car outside the window.</span>
+                <input type="text" id="m7" class="wide-input" placeholder="Исправленное предложение...">
+            </div>
+            <div class="input-group" style="flex-direction: column; align-items: flex-start;">
+                <span>8. I am having a new bicycle.</span>
+                <input type="text" id="m8" class="wide-input" placeholder="Исправленное предложение...">
+            </div>
+        </div>
+        <button class="btn-check" onclick="checkMistakes()">Проверить ответы</button>
+        <div class="feedback" id="feedback-mistakes"></div>
+    </div>
+
+    <!-- Task 4: Semi-controlled (Situations) -->
+    <div class="task">
+        <h2>4. Describe the Situation</h2>
+        <div class="hint">Прочитай ситуацию. Напиши одно предложение на английском, используя глагол в скобках. Будь внимательна со временем (Simple или Continuous).</div>
+        
+        <div class="writing-box">
+            <strong>Example:</strong> You are considering moving to a new city. (think)<br>
+            <i>I am thinking about moving to a new city.</i>
+        </div>
+
+        <div class="writing-box">
+            <span>1. You are at a restaurant and trying a new soup to check its flavor. (taste)</span>
+            <textarea id="s1" placeholder="Напиши предложение здесь..."></textarea>
+        </div>
+        <div class="writing-box">
+            <span>2. You are looking out the window and observing the rain. (see)</span>
+            <textarea id="s2" placeholder="Напиши предложение здесь..."></textarea>
+        </div>
+        <div class="writing-box">
+            <span>3. You are describing your friend's new car. It has a very nice smell inside. (smell)</span>
+            <textarea id="s3" placeholder="Напиши предложение здесь..."></textarea>
+        </div>
+        <div class="writing-box">
+            <span>4. You are thinking about getting a new phone. (think)</span>
+            <textarea id="s4" placeholder="Напиши предложение здесь..."></textarea>
+        </div>
+        <div class="writing-box">
+            <span>5. You are at a café and you want to check if your coffee is too hot. (taste)</span>
+            <textarea id="s5" placeholder="Напиши предложение здесь..."></textarea>
+        </div>
+        <div class="writing-box">
+            <span>6. You are looking at a beautiful flower in the garden. (see)</span>
+            <textarea id="s6" placeholder="Напиши предложение здесь..."></textarea>
+        </div>
+        <button class="btn-check" onclick="checkSituations()">Проверить текст</button>
+        <div class="feedback" id="feedback-situations"></div>
+    </div>
+
+    <!-- Task 5: Free Practice -->
+    <div class="task">
+        <h2>5. Make Your Own Sentences</h2>
+        <div class="hint">Напиши собственные предложения, используя глаголы в указанном значении.</div>
+        
+        <div class="writing-box">
+            <span>1. <b>HAVE</b> (meaning "to possess" - владеть): </span>
+            <textarea id="f1" placeholder="I have..."></textarea>
+        </div>
+        <div class="writing-box">
+            <span>2. <b>HAVE</b> (meaning "to experience/eat" - испытывать/есть): </span>
+            <textarea id="f2" placeholder="I am having..."></textarea>
+        </div>
+        <div class="writing-box">
+            <span>3. <b>SEE</b> (meaning "to meet" - встречать/встречаться): </span>
+            <textarea id="f3" placeholder="I am seeing..."></textarea>
+        </div>
+        <div class="writing-box">
+            <span>4. <b>SEE</b> (meaning "to perceive with eyes" - видеть): </span>
+            <textarea id="f4" placeholder="I see..."></textarea>
+        </div>
+        <div class="writing-box">
+            <span>5. <b>THINK</b> (meaning "to have an opinion" - считать/думать): </span>
+            <textarea id="f5" placeholder="I think..."></textarea>
+        </div>
+        <div class="writing-box">
+            <span>6. <b>THINK</b> (meaning "to consider" - обдумывать): </span>
+            <textarea id="f6" placeholder="I am thinking..."></textarea>
+        </div>
+        <div class="writing-box">
+            <span>7. <b>SMELL</b> (meaning "to have a smell" - пахнуть): </span>
+            <textarea id="f7" placeholder="It smells..."></textarea>
+        </div>
+        <div class="writing-box">
+            <span>8. <b>SMELL</b> (meaning "to use your nose" - нюхать): </span>
+            <textarea id="f8" placeholder="I am smelling..."></textarea>
+        </div>
+        <button class="btn-check" onclick="checkFree()">Проверить текст</button>
+        <div class="feedback" id="feedback-free"></div>
+    </div>
+
+</div>
+
+<script>
+    // Helper function for feedback
+    function showFeedback(elementId, correct, total) {
+        const feedbackEl = document.getElementById(elementId);
+        if (correct === total) {
+            feedbackEl.textContent = `Отлично! Все ответы верные (${correct} из ${total})! 🎉`;
+            feedbackEl.className = "feedback success";
+        } else {
+            feedbackEl.textContent = `Правильных ответов: ${correct} из ${total}. Проверь красные поля!`;
+            feedbackEl.className = "feedback error";
+        }
+    }
+
+    // Task 1 Logic
+    function checkVocab() {
+        const answers = {
+            v1: ["belong"], v2: ["appear"], v3: ["realise", "realize"], v4: ["detest"],
+            v5: ["prefer"], v6: ["contain"], v7: ["fit"], v8: ["matter"],
+            v9: ["owe"], v10: ["weigh"], v11: ["wish"], v12: ["include"], v13: ["own"]
+        };
+        let correctCount = 0;
+        for (let id in answers) {
+            let input = document.getElementById(id);
+            if (answers[id].includes(input.value.trim().toLowerCase())) {
+                input.classList.add('correct'); input.classList.remove('incorrect');
+                correctCount++;
+            } else {
+                input.classList.add('incorrect'); input.classList.remove('correct');
+            }
+        }
+        showFeedback('feedback-vocab', correctCount, Object.keys(answers).length);
+    }
+
+    // Task 2 Logic
+    function checkDual() {
+        const answers = {
+            d1: ["are you smelling", "why are you smelling"], 
+            d2: ["think"],
+            d3: ["smells"], 
+            d4: ["is having", "'s having"], 
+            d5: ["am thinking", "'m thinking"], 
+            d6: ["am seeing", "'m seeing"], 
+            d7: ["has"],
+            d8: ["see"],
+            d9: ["is tasting", "'s tasting"],
+            d10: ["tastes"],
+            d11: ["are having", "'re having"],
+            d12: ["am seeing", "'m seeing"]
+        };
+        let correctCount = 0;
+        for (let id in answers) {
+            let input = document.getElementById(id);
+            if (answers[id].includes(input.value.trim().toLowerCase())) {
+                input.classList.add('correct'); input.classList.remove('incorrect');
+                correctCount++;
+            } else {
+                input.classList.add('incorrect'); input.classList.remove('correct');
+            }
+        }
+        showFeedback('feedback-dual', correctCount, Object.keys(answers).length);
+    }
+
+    // Task 3 Logic (Full sentence check)
+    function checkMistakes() {
+        const answers = {
+            m1: "i know the answer",
+            m2: "she wants to go home",
+            m3: "he owns a big house",
+            m4: "the soup tastes delicious",
+            m5: "i believe his story",
+            m6: "they prefer tea",
+            m7: "i see a car outside the window",
+            m8: "i have a new bicycle"
+        };
+        let correctCount = 0;
+        for (let id in answers) {
+            let input = document.getElementById(id);
+            let userVal = input.value.toLowerCase().replace(/[.,!?]/g, '').trim();
+            if (userVal === answers[id]) {
+                input.classList.add('correct'); input.classList.remove('incorrect');
+                correctCount++;
+            } else {
+                input.classList.add('incorrect'); input.classList.remove('correct');
+            }
+        }
+        showFeedback('feedback-mistakes', correctCount, Object.keys(answers).length);
+    }
+
+    // Task 4 Logic (Keyword based)
+    function checkSituations() {
+        const s1 = document.getElementById('s1').value.toLowerCase();
+        const s2 = document.getElementById('s2').value.toLowerCase();
+        const s3 = document.getElementById('s3').value.toLowerCase();
+        const s4 = document.getElementById('s4').value.toLowerCase();
+        const s5 = document.getElementById('s5').value.toLowerCase();
+        const s6 = document.getElementById('s6').value.toLowerCase();
+        
+        let score = 0;
+        if (s1.includes("tasting") && (s1.includes("am ") || s1.includes("'m "))) score++; 
+        if (s2.includes("see")) score++; 
+        if (s3.includes("smells") || s3.includes("smell ")) score++; 
+        if (s4.includes("thinking") && (s4.includes("am ") || s4.includes("'m "))) score++; 
+        if (s5.includes("tasting") && (s5.includes("am ") || s5.includes("'m "))) score++; 
+        if (s6.includes("see")) score++; 
+
+        const feedbackEl = document.getElementById('feedback-situations');
+        if (score === 6) {
+            feedbackEl.textContent = "Отлично! Ты правильно поняла контекст во всех ситуациях! 🌟";
+            feedbackEl.className = "feedback success";
+        } else {
+            feedbackEl.textContent = `Правильно описано ситуаций: ${score} из 6. Проверь, правильно ли ты выбрала время (Simple или Continuous) для каждого глагола.`;
+            feedbackEl.className = "feedback error";
+        }
+    }
+
+    // Task 5 Logic (Keyword based)
+    function checkFree() {
+        const f1 = document.getElementById('f1').value.toLowerCase();
+        const f2 = document.getElementById('f2').value.toLowerCase();
+        const f3 = document.getElementById('f3').value.toLowerCase();
+        const f4 = document.getElementById('f4').value.toLowerCase();
+        const f5 = document.getElementById('f5').value.toLowerCase();
+        const f6 = document.getElementById('f6').value.toLowerCase();
+        const f7 = document.getElementById('f7').value.toLowerCase();
+        const f8 = document.getElementById('f8').value.toLowerCase();
+        
+        let score = 0;
+        if ((f1.includes("have ") || f1.includes("has ")) && !f1.includes("having")) score++;
+        if (f2.includes("having")) score++;
+        if (f3.includes("seeing")) score++;
+        if (f4.includes("see ") && !f4.includes("seeing")) score++;
+        if (f5.includes("think")) score++;
+        if (f6.includes("thinking")) score++;
+        if (f7.includes("smells") || f7.includes("smell ")) score++;
+        if (f8.includes("smelling")) score++;
+
+        const feedbackEl = document.getElementById('feedback-free');
+        if (score === 8) {
+            feedbackEl.textContent = "Великолепно! Твои предложения построены абсолютно верно! 🎉";
+            feedbackEl.className = "feedback success";
+        } else {
+            feedbackEl.textContent = `Проверено предложений: ${score} из 8. Проверь предложения: в каких-то случаях нужно Simple, а в каких-то Continuous (обрати внимание на подсказки в скобках).`;
+            feedbackEl.className = "feedback error";
+        }
+    }
+</script>
+
+</body>
+</html>
